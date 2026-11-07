@@ -1,0 +1,6 @@
+fecha_ejecucion,capa,fuente,regla,descripcion,revisados,afectados,resultado,accion
+2026-11-06T19:12:07,bronze,desempeno_municipal,filas_duplicadas_exactas,Filas idénticas en todas las columnas,246,0,OK,alertar
+2026-11-06T19:12:07,bronze,desempeno_municipal,dos_bloques_misma_vigencia,246 filas para 123 municipios: dos bloques rotulados 2020,246,123,FALLA,alertar
+2026-11-06T19:12:38,bronze,evaluaciones_agropecuarias,filas_duplicadas_exactas,Filas idénticas en todas las columnas,2613,0,OK,alertar
+2026-11-06T19:12:55,bronze,municipios_mgn,filas_duplicadas_exactas,Filas idénticas en todas las columnas,123,0,OK,alertar
+2026-11-06T19:12:56,bronze,capacidad_uso_igac,filas_duplicadas_exactas,Filas idénticas en todas las columnas,958,0,OK,alertar

@@ -1,0 +1,43 @@
+fecha_ejecucion,capa,fuente,regla,descripcion,revisados,afectados,resultado,accion
+2026-11-06T19:12:07,silver,desempeno,codigo_divipola_valido,Código de 5 dígitos que inicia en 15,246,0,OK,rechazar
+2026-11-06T19:12:07,silver,desempeno,codigo_existe_en_dane,El código existe en la población DANE,246,0,OK,rechazar
+2026-11-06T19:12:07,silver,desempeno,puntaje_mdm_no_nulo,Puntaje numérico,246,0,OK,rechazar
+2026-11-06T19:12:07,silver,desempeno,puntajes_0_100,Puntajes y componentes entre 0 y 100,246,0,OK,rechazar
+2026-11-06T19:12:07,silver,desempeno,grupo_capacidad_valido,Grupo de capacidades iniciales C o G1-G6,246,0,OK,alertar
+2026-11-06T19:12:07,silver,desempeno,nombre_coherente_con_codigo,El nombre del municipio corresponde al código DANE (sin tildes),246,2,FALLA,alertar
+2026-11-06T19:12:07,silver,desempeno,oficial_con_nombre_coherente,En el bloque oficial no se aceptan códigos con nombre de otro municipio,246,0,OK,rechazar
+2026-11-06T19:12:07,silver,desempeno,clave_unica,"Una fila por municipio, año y bloque",246,0,OK,detener
+2026-11-06T19:12:07,silver,desempeno_oficial,cardinalidad,Se esperaban 123 claves distintas; hay 123,123,0,OK,alertar
+2026-11-06T19:12:07,silver,desempeno,filas_duplicadas_exactas,Filas idénticas en todas las columnas,246,0,OK,alertar
+2026-11-06T19:12:38,silver,agricola,area_sembrada_ha_no_numerico,Valores de area_sembrada_ha que no se pudieron leer como número,2613,0,OK,alertar
+2026-11-06T19:12:38,silver,agricola,area_cosechada_ha_no_numerico,Valores de area_cosechada_ha que no se pudieron leer como número,2613,0,OK,alertar
+2026-11-06T19:12:38,silver,agricola,produccion_t_no_numerico,Valores de produccion_t que no se pudieron leer como número,2613,0,OK,alertar
+2026-11-06T19:12:38,silver,agricola,rendimiento_fuente_t_ha_no_numerico,Valores de rendimiento_fuente_t_ha que no se pudieron leer como número,2613,0,OK,alertar
+2026-11-06T19:12:38,silver,agricola,departamento_boyaca,Solo filas de Boyacá (15),2613,0,OK,rechazar
+2026-11-06T19:12:38,silver,agricola,codigo_divipola_valido,Código de 5 dígitos que inicia en 15,2613,0,OK,rechazar
+2026-11-06T19:12:38,silver,agricola,periodo_valido,"Periodo AAAA, AAAAA o AAAAB",2613,0,OK,rechazar
+2026-11-06T19:12:38,silver,agricola,cultivo_informado,Cultivo y código de cultivo presentes,2613,0,OK,rechazar
+2026-11-06T19:12:38,silver,agricola,produccion_y_area_informadas,Producción y área cosechada numéricas (faltante no es cero),2613,0,OK,rechazar
+2026-11-06T19:12:38,silver,agricola,valores_no_negativos,"Áreas, producción y rendimiento >= 0",2613,0,OK,rechazar
+2026-11-06T19:12:38,silver,agricola,cosechada_no_mayor_sembrada,Área cosechada <= sembrada (en permanentes puede cosecharse área sembrada en años previos),2613,373,FALLA,alertar
+2026-11-06T19:12:38,silver,agricola,produccion_con_area,"Si hay producción, hay área cosechada",2613,0,OK,alertar
+2026-11-06T19:12:38,silver,agricola,rendimiento_fuente_razonable,"Rendimiento reportado entre 0 y 500 t/ha (revisar extremos, no se eliminan)",2613,0,OK,alertar
+2026-11-06T19:12:38,silver,agricola,clave_unica,"Una fila por municipio, cultivo, periodo y estado físico; repetidas -> rejects",2613,0,OK,rechazar
+2026-11-06T19:12:38,silver,agricola,cardinalidad,Se esperaban 123 claves distintas; hay 123,123,0,OK,alertar
+2026-11-06T19:12:38,silver,agricola,filas_duplicadas_exactas,Filas idénticas en todas las columnas,2613,0,OK,alertar
+2026-11-06T19:12:55,silver,municipios,codigo_divipola_valido,Código de 5 dígitos que inicia en 15,123,0,OK,rechazar
+2026-11-06T19:12:55,silver,municipios,clave_unica,Un polígono por municipio,123,0,OK,detener
+2026-11-06T19:12:55,silver,municipios,cardinalidad,Se esperaban 123 municipios; hay 123,123,0,OK,alertar
+2026-11-06T19:12:55,silver,municipios,geometrias_nulas_o_vacias,Sin geometría no hay polígono que dibujar ni intersectar,123,0,OK,rechazar
+2026-11-06T19:12:55,silver,municipios,geometrias_invalidas_reparadas,Autointersecciones u otros errores topológicos reparados con make_valid,123,0,OK,alertar
+2026-11-06T19:12:55,silver,municipios,tipo_geometria_poligonal,Tipos: {'Polygon': 123},123,0,OK,alertar
+2026-11-06T19:12:55,silver,municipios,area_simplificada_vs_oficial_mayor_2pct,Diferencia media 0.09% por la simplificación a 75 m,123,0,OK,alertar
+2026-11-06T19:12:55,silver,municipios,codigo_existe_en_poblacion,Cada polígono tiene población DANE,123,0,OK,alertar
+2026-11-06T19:12:56,silver,capacidad_uso,clase_valida,"Clase en I-VIII, ZU o CA",958,0,OK,rechazar
+2026-11-06T19:12:56,silver,capacidad_uso,clases_ausentes,"Clases sin polígonos en Boyacá: ['I', 'II']",8,2,FALLA,alertar
+2026-11-06T19:12:56,silver,capacidad_uso,geometrias_nulas_o_vacias,Sin geometría no hay polígono que dibujar ni intersectar,958,0,OK,rechazar
+2026-11-06T19:12:56,silver,capacidad_uso,geometrias_invalidas_reparadas,Autointersecciones u otros errores topológicos reparados con make_valid,958,2,FALLA,alertar
+2026-11-06T19:12:56,silver,capacidad_uso,geometrias_irreparables,Tras reparar no quedó un polígono,958,0,OK,rechazar
+2026-11-06T19:12:56,silver,capacidad_uso,tipo_geometria_poligonal,Tipos: {'Polygon': 958},958,0,OK,alertar
+2026-11-06T19:12:57,silver,capacidad_uso,area_calculada_vs_igac_mayor_5pct,Diferencia mediana 0.00% entre área en EPSG:9377 y la reportada,958,0,OK,alertar
+2026-11-06T19:12:57,silver,capacidad_uso,area_positiva,Polígonos con área > 0,958,0,OK,alertar

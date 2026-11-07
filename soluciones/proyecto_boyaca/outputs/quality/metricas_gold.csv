@@ -1,0 +1,31 @@
+fecha_ejecucion,capa,fuente,regla,descripcion,revisados,afectados,resultado,accion
+2026-11-06T19:12:39,gold,cultivo_municipio,rendimiento_division_por_cero,Cultivos con área cosechada 0: rendimiento = null (no se divide entre cero),1731,56,FALLA,alertar
+2026-11-06T19:12:39,gold,cultivo_municipio,rendimiento_finito,Sin infinitos ni NaN,1731,0,OK,detener
+2026-11-06T19:12:39,gold,cultivo_municipio,rendimiento_no_negativo,Rendimiento >= 0,1731,0,OK,detener
+2026-11-06T19:12:39,gold,cultivo_municipio,conciliacion_produccion_silver,Producción total gold - silver = 0.000000 t,2613,0,OK,alertar
+2026-11-06T19:13:02,gold,suelo,municipios_sin_cobertura,Municipios que la capa IGAC no cubre,123,0,OK,alertar
+2026-11-06T19:13:02,gold,suelo,composicion_suma_100,La composición de cada municipio suma 100 %,123,0,OK,detener
+2026-11-06T19:13:02,gold,suelo,area_clasificada_no_supera_municipio,Área IGAC dentro del municipio <= área municipal (+1 % de tolerancia por bordes),123,0,OK,alertar
+2026-11-06T19:13:02,gold,suelo,pct_sin_clasificar_mayor_5,Municipios con más de 5 % de su área sin clase (bordes simplificados o vacíos de la capa),123,7,FALLA,alertar
+2026-11-06T19:13:17,gold,integracion,union_desempeno_sin_vincular_izq,123 claves coinciden; 0 de la base sin dato en desempeno,123,0,OK,alertar
+2026-11-06T19:13:17,gold,integracion,union_desempeno_sin_vincular_der,0 claves de desempeno que no existen en la base,123,0,OK,alertar
+2026-11-06T19:13:17,gold,integracion,union_agricola_sin_vincular_izq,123 claves coinciden; 0 de la base sin dato en agricola,123,0,OK,alertar
+2026-11-06T19:13:17,gold,integracion,union_agricola_sin_vincular_der,0 claves de agricola que no existen en la base,123,0,OK,alertar
+2026-11-06T19:13:17,gold,integracion,union_pct_rural_sin_vincular_izq,615 claves coinciden; 123 de la base sin dato en pct_rural,738,123,FALLA,alertar
+2026-11-06T19:13:17,gold,integracion,union_pct_rural_sin_vincular_der,0 claves de pct_rural que no existen en la base,615,0,OK,alertar
+2026-11-06T19:13:17,gold,integracion,union_suelo_sin_vincular_izq,123 claves coinciden; 0 de la base sin dato en suelo,123,0,OK,alertar
+2026-11-06T19:13:17,gold,integracion,union_suelo_sin_vincular_der,0 claves de suelo que no existen en la base,123,0,OK,alertar
+2026-11-06T19:13:17,gold,municipio_anio,conciliacion_poblacion_silver,La población total no cambia al integrar (sin duplicados por las uniones),738,0,OK,detener
+2026-11-06T19:13:17,gold,municipio_anio,porcentajes_0_100,Todas las proporciones entre 0 y 100,738,0,OK,detener
+2026-11-06T19:13:17,gold,municipio_anio,mdm_solo_en_su_anio,puntaje_mdm solo en 2020,738,0,OK,detener
+2026-11-06T19:13:17,gold,municipio_anio,produccion_solo_en_su_anio,Producción solo en 2023,738,0,OK,detener
+2026-11-06T19:13:17,gold,municipio_anio,indicadores_finitos,Sin infinitos: no hubo división entre cero,738,0,OK,detener
+2026-11-06T19:13:17,gold,municipio_anio,mdm_disponible_en_2020,Municipios de 2020 sin puntaje (quedan fuera de la hipótesis principal),738,0,OK,alertar
+2026-11-06T19:13:17,gold,municipio_anio,produccion_disponible_en_2023,Municipios de 2023 sin producción reportada,738,0,OK,alertar
+2026-11-06T19:13:17,gold,municipio_anio,cardinalidad_anio_2023,anio=2023: se esperaban 123 municipios; hay 123,123,0,OK,alertar
+2026-11-06T19:13:17,gold,municipio_anio,cardinalidad_anio_2020,anio=2020: se esperaban 123 municipios; hay 123,123,0,OK,alertar
+2026-11-06T19:13:17,gold,municipio_anio,cardinalidad_anio_2025,anio=2025: se esperaban 123 municipios; hay 123,123,0,OK,alertar
+2026-11-06T19:13:17,gold,municipio_anio,cardinalidad_anio_2021,anio=2021: se esperaban 123 municipios; hay 123,123,0,OK,alertar
+2026-11-06T19:13:17,gold,municipio_anio,cardinalidad_anio_2022,anio=2022: se esperaban 123 municipios; hay 123,123,0,OK,alertar
+2026-11-06T19:13:17,gold,municipio_anio,cardinalidad_anio_2024,anio=2024: se esperaban 123 municipios; hay 123,123,0,OK,alertar
+2026-11-06T19:13:20,gold,maestro,municipios_con_geometria,Municipios de la tabla analítica que tienen polígono,123,0,OK,alertar
