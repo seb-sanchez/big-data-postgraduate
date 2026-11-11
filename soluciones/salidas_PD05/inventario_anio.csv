@@ -1,0 +1,13 @@
+anio,archivo,filas,bytes
+2014,por_anio/parte-0000.parquet,10886,96684
+2015,por_anio/parte-0001.parquet,13228,117813
+2016,por_anio/parte-0002.parquet,14539,130811
+2017,por_anio/parte-0003.parquet,7655,72315
+2018,por_anio/parte-0004.parquet,4208,42203
+2019,por_anio/parte-0005.parquet,5983,57732
+2020,por_anio/parte-0006.parquet,5048,50602
+2021,por_anio/parte-0007.parquet,7229,68667
+2022,por_anio/parte-0008.parquet,9784,88482
+2023,por_anio/parte-0009.parquet,7847,71468
+2024,por_anio/parte-0010.parquet,3646,38072
+2025,por_anio/parte-0011.parquet,2685,30155
